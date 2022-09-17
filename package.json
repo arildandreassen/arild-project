@@ -1,0 +1,32 @@
+{
+  "name": "arild-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate.up": "node ./db/migration/20220916071648-movies-up.js",
+    "migrate.down": "node ./db/migration/20220916071648-movies-down.js",
+    "local.db.up": "sh ./scripts/local-db-up.sh",
+    "local.db.down": "sh ./scripts/local-db-down.sh",
+    "seed": "node ./db/seed/20220916071648-seed-movies.js",
+    "download.seed": "node ./db/seed/download_seed_file.js",
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "decompress": "^4.2.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "fast-csv": "^4.3.6",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
